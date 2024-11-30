@@ -239,6 +239,97 @@
         .publication-card a:hover {
             color: var(--primary-color);
         }
+
+        /* Experience Card Styling */
+        .experience-card-header {
+            margin-bottom: 1rem;
+        }
+
+        .experience-card-header h3 {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .company-name {
+            color: var(--secondary-color);
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .date {
+            color: #888;
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+        .experience-details {
+            color: #e0e0e0;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .experience-details li {
+            margin-bottom: 0.5rem;
+            padding-left: 1rem;
+            position: relative;
+        }
+
+        .experience-details li:before {
+            content: "•";
+            color: var(--secondary-color);
+            position: absolute;
+            left: 0;
+        }
+
+        /* Project Card Styling */
+        .project-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-title {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-description {
+            color: #e0e0e0;
+            margin-bottom: 1rem;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tech-tag {
+            background: rgba(114, 9, 183, 0.2);
+            color: var(--secondary-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
@@ -256,7 +347,7 @@
         <div class="hero-content">
             <img src="1702507839320-removebg-preview__2___1_-removebg-preview (2).jpg" alt="Muhammad Furqan Javed" class="profile-picture">
             <h1>Muhammad Furqan Javed</h1>
-            <p>AI Engineer | Machine Learning Specialist</p>
+            <p>AI Engineer</p>
         </div>
     </section>
 
@@ -264,16 +355,58 @@
         <h2 class="section-title">Experience</h2>
         <div class="experience-grid">
             <div class="card">
-                <h3>AI Engineer</h3>
-                <p>Codistan Ventures</p>
-                <p>Sep 2024 - Present</p>
-                <!-- Add experience details -->
+                <div class="experience-card-header">
+                    <h3>AI Engineer</h3>
+                    <div class="company-name">Codistan Ventures</div>
+                    <div class="date">Sep 2024 - Present</div>
+                </div>
+                <ul class="experience-details">
+                    <li>Developing AI-driven agent role-transferring capabilities using OpenAI's Swarm framework</li>
+                    <li>Building AI-powered job portal with personalized cover letter generation</li>
+                    <li>Implementing ATS-compliant resume generation system using advanced NLP</li>
+                    <li>Developing automated LinkedIn job application system using Selenium</li>
+                    <li>Creating efficient data processing pipelines for resume parsing and analysis</li>
+                </ul>
             </div>
             <div class="card">
-                <h3>Machine Learning Engineer</h3>
-                <p>Volmatica.Inc</p>
-                <p>Feb 2023 - Sep 2024</p>
-                <!-- Add experience details -->
+                <div class="experience-card-header">
+                    <h3>Machine Learning Engineer</h3>
+                    <div class="company-name">Volmatica.Inc</div>
+                    <div class="date">Feb 2023 - Sep 2024</div>
+                </div>
+                <ul class="experience-details">
+                    <li>Fine-tuned LLMs (Falcon, MPT, Cerebras, LLAMA, Flan) using QLoRA and PEFT</li>
+                    <li>Developed Friend Bot using llama2 and LangChain</li>
+                    <li>Created Smart Contract Audit report generation system</li>
+                    <li>Implemented RAG pipeline chatbots</li>
+                    <li>Integrated GROQ and LLama2 with WebSocket for real-time communication</li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="experience-card-header">
+                    <h3>AI Engineer - Freelancer</h3>
+                    <div class="date">Jan 2021 - Present</div>
+                </div>
+                <ul class="experience-details">
+                    <li>Worked on ML, NLP, and Computer Vision projects</li>
+                    <li>Labor Dispatch Project implementation</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2 class="section-title">Education</h2>
+        <div class="experience-grid">
+            <div class="card">
+                <h3>Masters in Artificial Intelligence</h3>
+                <p>Air University, Islamabad, Pakistan</p>
+                <p>Sep 2022 - June 2024</p>
+            </div>
+            <div class="card">
+                <h3>Bachelors in Electrical Engineering</h3>
+                <p>COMSATS University Islamabad, Pakistan</p>
+                <p>Sep 2016 - June 2020</p>
             </div>
         </div>
     </section>
@@ -285,24 +418,61 @@
             <span class="skill-tag">Deep Learning</span>
             <span class="skill-tag">Natural Language Processing</span>
             <span class="skill-tag">Computer Vision</span>
-            <span class="skill-tag">LLM's Fine-tuning</span>
-            <span class="skill-tag">RAG pipelines</span>
-            <!-- Add more skills -->
+            <span class="skill-tag">LLM Fine-tuning</span>
+            <span class="skill-tag">RAG Pipelines</span>
+            <span class="skill-tag">PyTorch</span>
+            <span class="skill-tag">TensorFlow</span>
+            <span class="skill-tag">OpenAI</span>
+            <span class="skill-tag">LangChain</span>
+            <span class="skill-tag">Hugging Face</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">FlaskAPI</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">FastAPI</span>
+            <span class="skill-tag">AWS</span>
         </div>
     </section>
 
     <section id="projects">
         <h2 class="section-title">Projects</h2>
         <div class="experience-grid">
-            <div class="card">
-                <h3>Ship Classification System</h3>
-                <p>Using Canny Edge Detection, HOG Feature extractor and CNN</p>
+            <div class="project-card">
+                <h3 class="project-title">Ship Classification System</h3>
+                <p class="project-description">Advanced maritime vessel classification system using computer vision and deep learning techniques.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Canny Edge Detection</span>
+                    <span class="tech-tag">HOG Features</span>
+                    <span class="tech-tag">CNN</span>
+                    <span class="tech-tag">Computer Vision</span>
+                </div>
             </div>
-            <div class="card">
-                <h3>Multifunction RAG Application</h3>
-                <p>AI assistant, PDF summarizer, code generator using langchain and llama2</p>
+
+            <div class="project-card">
+                <h3 class="project-title">Multifunction RAG Application</h3>
+                <p class="project-description">Comprehensive AI application featuring multiple functionalities powered by advanced language models.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">LangChain</span>
+                    <span class="tech-tag">LLama2</span>
+                    <span class="tech-tag">RAG</span>
+                    <span class="tech-tag">PDF Processing</span>
+                </div>
             </div>
-            <!-- Add more projects -->
+
+            <div class="project-card">
+                <h3 class="project-title">Logo Detection System</h3>
+                <p class="project-description">Automated system for detecting and classifying logos in advertisement videos using deep learning.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Object Detection</span>
+                    <span class="tech-tag">Deep Learning</span>
+                    <span class="tech-tag">Video Processing</span>
+                    <span class="tech-tag">OpenCV</span>
+                </div>
+            </div>
+
+
+    
         </div>
     </section>
 
